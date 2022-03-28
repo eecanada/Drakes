@@ -94,3 +94,33 @@ body {
 .hero-links:hover {
   color: #ffffff;
 }
+
+.product-row {
+  margin-top: 12rem;
+}
+
+.category-col a {
+  color: #192d21 !important;
+}
+
+.category-img {
+  /* max-width: 37.5rem; */
+  max-height: 50rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.category-text {
+  padding: 0 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+  text-align: left;
+  text-decoration: underline;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.category-text:hover {
+  color: #000;
+}
