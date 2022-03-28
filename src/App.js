@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import AnnouncementBar from './components/announcementBar';
+import NavBar from './components/navBar';
+import logo from './assets/images/drakes-logo.svg';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [links, setLinks] = useState([
+    `what's new`,
+    'pernnials',
+    'clothing',
+    'shirts',
+    'accessories',
+    'shoes',
+    'editorial',
+  ]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container-fluid">
+      <div className="row">
+        <AnnouncementBar announcement="Free Express Shipping" />
+      </div>
+      <div>
+        <NavBar logo={logo} links={links} />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
