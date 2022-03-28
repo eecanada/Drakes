@@ -1,10 +1,10 @@
 import React from 'react';
 
-const NavBar = ({ logo, links }) => {
+const NavBar = ({ logo, links, icons }) => {
   return (
     <nav class="navbar navbar-expand-sm">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand nav-logo" href="/">
           <img src={logo} alt="" width="170" />
         </a>
         <button
@@ -28,6 +28,15 @@ const NavBar = ({ logo, links }) => {
               );
             })}
           </ul>
+        </div>
+        <div className="nav-icons-container">
+          {icons.map((icon) => {
+            return (
+              <a class="nav-icons" href="/">
+                <img src={icon} alt="" width="25" height="25" />
+              </a>
+            );
+          })}
         </div>
       </div>
     </nav>
