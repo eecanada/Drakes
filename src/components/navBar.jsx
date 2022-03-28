@@ -4,7 +4,7 @@ const NavBar = ({ logo, links }) => {
   return (
     <nav class="navbar navbar-expand-sm">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
           <img src={logo} alt="" width="170" />
         </a>
         <button
