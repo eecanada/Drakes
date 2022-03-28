@@ -16,7 +16,7 @@ const App = () => {
       <div className="row">
         <AnnouncementBar announcement="Free Express Shipping" />
       </div>
-      <div>
+      <div  className='d-flex justify-content-around align-items-center '>
         <NavBar
           logo={logo}
           links={[

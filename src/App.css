@@ -23,7 +23,7 @@ body {
 }
 
 .navbar {
-  margin: 0 8rem;
+  margin: 0 4rem;
   font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -38,11 +38,12 @@ body {
   color: #192d21;
   text-transform: uppercase;
   font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.875px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
   line-height: 1.4rem;
-  padding-top: 3rem !important;
-  padding-bottom: 3rem !important;
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+  margin-right: 1.5rem;
 }
 
 .nav-link:hover {
@@ -50,12 +51,15 @@ body {
   color: #192d21;
 }
 
+.nav-icons-container {
+  margin-left: 10rem;
+}
 .nav-icons {
   margin: 0 1.5rem;
 }
 
 .hero-image {
-  height: 85vh;
+  height: 82vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -67,11 +71,12 @@ body {
 
 .hero-col {
   color: #ffffff;
+  margin-top: 6rem;
 }
 
 .hero-text {
   font-size: 3.8rem !important;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 5.7rem;
   text-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
@@ -80,9 +85,10 @@ body {
   display: block;
   color: #ffffff;
   font-size: 3.2rem !important;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 4.8rem;
   text-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  text-transform: capitalize;
 }
 
 .hero-links:hover {
