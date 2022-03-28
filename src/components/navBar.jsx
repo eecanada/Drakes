@@ -5,7 +5,7 @@ const NavBar = ({ logo, links, icons }) => {
     <nav class="navbar navbar-expand-sm">
       <div class="container-fluid">
         <a class="navbar-brand nav-logo" href="/">
-          <img src={logo} alt="" width="170" />
+          <img src={logo} alt="icon" width="170" />
         </a>
         <button
           class="navbar-toggler"
@@ -33,7 +33,7 @@ const NavBar = ({ logo, links, icons }) => {
           {icons.map((icon) => {
             return (
               <a class="nav-icons" href="/">
-                <img src={icon} alt="" width="25" height="25" />
+                <img src={icon} alt="icon" width="25" height="25" />
               </a>
             );
           })}
