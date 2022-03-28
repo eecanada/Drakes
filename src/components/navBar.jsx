@@ -22,7 +22,7 @@ const NavBar = ({ logo, links }) => {
           <ul class="navbar-nav">
             {links.map((link) => {
               return (
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/">
                   {link}
                 </a>
               );
