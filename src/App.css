@@ -166,3 +166,40 @@ body {
 .featured-product-link:hover {
   color: #000;
 }
+
+@media screen and (max-width: 1639px) {
+  .category-img {
+    max-height: 40rem;
+  }
+}
+
+@media screen and (max-width: 1293px) {
+  .category-img {
+    max-height: 35rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .category-img {
+    max-height: 30rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .category-img {
+    max-height: 23rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .category-img {
+    max-height: 70rem
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .category-img {
+    max-height: 40rem
+  }
+}
+
