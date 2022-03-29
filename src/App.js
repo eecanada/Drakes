@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import AnnouncementBar from './components/announcementBar';
 import NavBar from './components/navBar';
 import Hero from './components/hero';
 import ProductCategories from './components/productCategories';
 import FeaturedProduct from './components/featuredProduct';
+import MyVerticallyCenteredModal from './components/myVerticallyCenteredModal';
 import logo from './assets/images/drakes-logo.svg';
 import search from './assets/images/icons/search.svg';
 import account from './assets/images/icons/account.svg';
@@ -14,14 +15,37 @@ import poloCoat from './assets/images/polocoat.jpg';
 import arrow from './assets/images/icons/arrow.svg';
 import { getCategories } from './services/getProductCategories';
 import { getFavorites } from './services/getFavoriteProducts';
+import Button from 'react-bootstrap/Button';
+
 import './App.css';
 import FavoriteProducts from './components/favoriteProducts';
 import Footer from './components/footer';
 
 const App = () => {
+  const [footerEmail, setFooterEmail] = useState('');
+  const [submit, setSubmit] = useState(false);
+  const [modalShow, setModalShow] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setModalShow(true);
+    }, 3000);
+  }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFooterEmail('');
+    setSubmit(true);
+    console.log('submit');
+  };
+
+  const handleFormChange = (e) => {
+    setFooterEmail(e.target.value);
+  };
 
   const categories = getCategories();
   const favorites = getFavorites();
+
   const excerpt =
     'There should be a special word for that feeling you get when you put on a coat that just feels right. The way your posture seems to magically correct itself, like an an Italian wool chiropractor invisibly knotting and kneading. The right piece of outerwear can give an added sense of power and gravitas. In the same way a suit can feel like a suit of armour for the day ahead, the perfect coat can make even the bleakest winter morning, if not exciting, at least an exciting opportunity to wear a beautiful coat.';
 
@@ -43,8 +67,22 @@ const App = () => {
   ];
 
   const footerLinks3 = ['Facebook', 'Instagram', 'Pinterest', 'Twitter'];
+
   return (
     <div className="container-fluid">
+      {/* <Button variant="primary" onClick={() => setModalShow(true)}>
+        Launch vertically centered modal
+      </Button> */}
+
+      <MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        handleSubmit={handleSubmit}
+        handleFormChange={handleFormChange}
+        formSubmitted={submit}
+        footerEmail={footerEmail}
+      />
+
       <div className="row">
         <AnnouncementBar announcement="Free Express Shipping" />
       </div>
@@ -96,6 +134,10 @@ const App = () => {
           links1={footerLinks1}
           links2={footerLinks2}
           links3={footerLinks3}
+          footerEmail={footerEmail}
+          handleSubmit={handleSubmit}
+          handleFormChange={handleFormChange}
+          formSubmitted={submit}
         />
       </div>
     </div>
