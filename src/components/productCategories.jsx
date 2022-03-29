@@ -6,7 +6,11 @@ const ProductCategories = ({ categories }) => {
       {categories.map((category) => {
         return (
           <a href={category.link}>
-            <img className="category-img" alt={category.title} src={category.img} />
+            <img
+              className="category-img"
+              alt={category.title}
+              src={category.img}
+            />
             <h4 className="category-text">{category.title}</h4>
           </a>
         );

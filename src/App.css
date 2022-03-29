@@ -212,10 +212,114 @@ body {
   text-align: center;
   margin-top: 1rem;
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 2rem;
   text-align: center;
   text-decoration: none !important;
+}
+
+.footer-main-text {
+  text-transform: uppercase;
+  font-size: 2.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08rem;
+  line-height: 3.1rem;
+  margin-top: 2.2rem;
+}
+
+.footer-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  margin-top: 8rem;
+  border-top: 1px solid rgba(25, 45, 33, 0.4);
+  background-color: #f4f7f1;
+}
+
+.footer-icon {
+  max-width: 5.7rem;
+  max-height: 3.9rem;
+}
+
+.links-container {
+  max-height: 40rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+.footer-links {
+  color: #192d21 !important;
+  text-decoration: none !important;
+}
+
+.footer-links > ul > li {
+  padding: 1rem;
+  list-style: none;
+}
+
+.subscription-privacy-text {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 2rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.form-text {
+  font-family: 'ITC Caslon 224 Std', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 2.4rem;
+  color: #192d21;
+}
+.input-form {
+  background-color: #f9fbf8;
+  outline: 0;
+  border: 1px solid #192d21;
+  font-size: 1.8rem;
+  min-height: 5rem;
+  padding: 0 1.1rem;
+  border-radius: 0;
+  width: 85%;
+}
+.input-form:focus {
+  box-shadow: inset 0 0 0 2px #356349;
+}
+
+.social-ul {
+  padding-left: 0 !important;
+  margin-top: 3rem;
+}
+
+.list-style {
+  list-style: none;
+  padding-right: 1rem;
+}
+
+.list-style a {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 2.4rem;
+  color: #192d21;
+}
+
+.button-footer {
+  border: 1px solid #192d21;
+  outline: 0;
+  min-height: 5rem;
+  padding: 0 1.1rem;
+  width: 15%;
+  background-color: #f4f7f0;
+  transition-duration: 0.2s;
+}
+
+.button-footer:hover {
+  background-color: #192d21;
+  color: #f4f7f0;
 }
 
 @media screen and (max-width: 1639px) {
