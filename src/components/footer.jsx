@@ -18,7 +18,7 @@ const Footer = ({ footerText, icon, links1, links2, links3 }) => {
             {links1.map((link, index) => {
               return (
                 <li key={index}>
-                  <a className="footer-links">{link}</a>
+                  <a href="/" className="footer-links">{link}</a>
                 </li>
               );
             })}
@@ -29,7 +29,7 @@ const Footer = ({ footerText, icon, links1, links2, links3 }) => {
             {links2.map((link, index) => {
               return (
                 <li key={index}>
-                  <a className="footer-links">{link}</a>
+                  <a href="/" className="footer-links">{link}</a>
                 </li>
               );
             })}
@@ -68,7 +68,7 @@ const Footer = ({ footerText, icon, links1, links2, links3 }) => {
                 {links3.map((link, index) => {
                   return (
                     <li className="pl-2 list-style" key={index}>
-                      <a className="social-link">{link}</a>
+                      <a href="/" className="social-link">{link}</a>
                     </li>
                   );
                 })}
