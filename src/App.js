@@ -11,11 +11,14 @@ import basket from './assets/images/icons/basket.svg';
 import question from './assets/images/icons/question.svg';
 import heroImage from './assets/images/hero-image-lg.jpg';
 import poloCoat from './assets/images/polocoat.jpg';
-import { getCategories } from './getProductCategories';
+import { getCategories } from './services/getProductCategories';
+import { getFavorites } from './services/getFavoriteProducts';
 import './App.css';
+import FavoriteProducts from './components/favoriteProducts';
 
 const App = () => {
   const categories = getCategories();
+  const favorites = getFavorites();
   const excerpt =
     'There should be a special word for that feeling you get when you put on a coat that just feels right. The way your posture seems to magically correct itself, like an an Italian wool chiropractor invisibly knotting and kneading. The right piece of outerwear can give an added sense of power and gravitas. In the same way a suit can feel like a suit of armour for the day ahead, the perfect coat can make even the bleakest winter morning, if not exciting, at least an exciting opportunity to wear a beautiful coat.';
 
@@ -59,6 +62,10 @@ const App = () => {
           excerpt={excerpt}
           link="/"
         />
+      </div>
+      
+      <div className="row favorite-product-row">
+        <FavoriteProducts favorites={favorites} title="Shop the Look" />
       </div>
     </div>
   );

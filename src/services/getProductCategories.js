@@ -1,11 +1,11 @@
-import coat from './assets/images/coats.jpg';
-import shoes from './assets/images/shoes.jpg';
-import knitwear from './assets/images/knitwear.jpg';
-import suits from './assets/images/suits.jpg';
-import denim from './assets/images/jeans.jpg';
-import hats from './assets/images/hats.jpg';
-import shirts from './assets/images/shirts.jpg';
-import suede from './assets/images/suede.jpg';
+import coat from '../assets/images/coats.jpg';
+import shoes from '../assets/images/shoes.jpg';
+import knitwear from '../assets/images/knitwear.jpg';
+import suits from '../assets/images/suits.jpg';
+import denim from '../assets/images/jeans.jpg';
+import hats from '../assets/images/hats.jpg';
+import shirts from '../assets/images/shirts.jpg';
+import suede from '../assets/images/suede.jpg';
 
 const categories = [
   {
