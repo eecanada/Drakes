@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 import modalIcon from '../assets/images/modal-icon.png';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 
 function MyVerticallyCenteredModal(props) {
   const { handleFormChange, formSubmitted, handleSubmit, footerEmail } = props;
@@ -13,7 +13,11 @@ function MyVerticallyCenteredModal(props) {
       centered
     >
       <Modal.Header closeButton></Modal.Header>
-      <img src={modalIcon} style={{ maxWidth: '10rem', margin: '0 auto' }} />
+      <img
+        src={modalIcon}
+        alt="man reading newspaper"
+        style={{ maxWidth: '10rem', margin: '0 auto' }}
+      />
       {/* <Modal.Title id="contained-modal-title-vcenter">
           Keep up to date with new products and life at Drake's by entering your
           email below

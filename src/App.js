@@ -15,7 +15,7 @@ import poloCoat from './assets/images/polocoat.jpg';
 import arrow from './assets/images/icons/arrow.svg';
 import { getCategories } from './services/getProductCategories';
 import { getFavorites } from './services/getFavoriteProducts';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 
 import './App.css';
 import FavoriteProducts from './components/favoriteProducts';
