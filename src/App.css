@@ -58,6 +58,10 @@ body {
   margin: 0 1.5rem;
 }
 
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
 .hero-image {
   height: 82vh;
   background-repeat: no-repeat;
@@ -360,15 +364,84 @@ body {
   border-top: none !important;
 }
 
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: 0 0 0 0 !important;
+}
+
+#contained-modal-title-vcenter {
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.form-select {
+  outline: 0;
+  font-size: 1.5rem;
+  border: 1px solid #192d21;
+  font-size: 1.8rem;
+  min-height: 5rem;
+  padding: 0 1.1rem;
+  color: #192d21;
+
+  border-radius: 0;
+}
+
+.form-select:focus {
+  box-shadow: inset 0 0 0 2px #356349;
+  border-color: none !important;
+  outline: 0 !important;
+}
+
 @media screen and (max-width: 1639px) {
   .category-img {
     max-height: 40rem;
   }
 }
 
+@media screen and (max-width: 1588px) {
+  .links-container {
+    flex-direction: row-reverse;
+    flex-wrap: none !important;
+  }
+  .newsletter-col {
+    width: 100%;
+    order: 1;
+    padding: 0 10%;
+  }
+  .footer-links {
+    order: 2;
+  }
+}
+
 @media screen and (max-width: 1293px) {
   .category-img {
     max-height: 35rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .nav-large {
+    display: none;
+  }
+  .nav-sm {
+    display: block;
+  }
+  .navbar-nav {
+    margin-top: 2rem;
+  }
+  .nav-link {
+    padding-top: 1rem !important;
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  .nav-sm {
+    display: none;
+  }
+  .nav-large {
+    display: block;
   }
 }
 
@@ -390,8 +463,19 @@ body {
   }
 }
 
+@media screen and (max-width: 605px) {
+  .nav-icons-container {
+    margin-left: 0rem;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .category-img {
     max-height: 40rem;
   }
+}
+
+.offcanvas-end {
+  width: 100vw;
+  border-left: 1px solid #192d21;
 }

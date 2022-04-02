@@ -49,7 +49,7 @@ const Footer = ({
             })}
           </ul>
         </div>
-        <div className="col-3">
+        <div className="col-3 newsletter-col">
           <div>
             <p className="form-text">
               Keep up to date with new products and life at Drake's by entering

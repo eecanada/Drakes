@@ -4,6 +4,7 @@ import NavBar from './components/navBar';
 import Hero from './components/hero';
 import ProductCategories from './components/productCategories';
 import FeaturedProduct from './components/featuredProduct';
+import Country from './components/country';
 import MyVerticallyCenteredModal from './components/myVerticallyCenteredModal';
 import logo from './assets/images/drakes-logo.svg';
 import search from './assets/images/icons/search.svg';
@@ -15,7 +16,7 @@ import poloCoat from './assets/images/polocoat.jpg';
 import arrow from './assets/images/icons/arrow.svg';
 import { getCategories } from './services/getProductCategories';
 import { getFavorites } from './services/getFavoriteProducts';
-// import Button from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button';
 
 import './App.css';
 import FavoriteProducts from './components/favoriteProducts';
@@ -25,12 +26,13 @@ const App = () => {
   const [footerEmail, setFooterEmail] = useState('');
   const [submit, setSubmit] = useState(false);
   const [modalShow, setModalShow] = useState(false);
+  const [modalCountryShow, setmodalCountryShow] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setModalShow(true);
-    }, 3000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setModalShow(true);
+  //   }, 3000);
+  // }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -84,7 +86,20 @@ const App = () => {
       />
 
       <div className="row">
-        <AnnouncementBar announcement="Free Express Shipping" />
+        <Country
+          show={modalCountryShow}
+          onHide={() => setmodalCountryShow(false)}
+        />
+
+        <div>
+          <Button variant="primary" onClick={() => setmodalCountryShow(true)}>
+            Shopping in: {}
+          </Button>
+          <AnnouncementBar announcement="Free Express Shipping" />
+          <Button variant="primary" onClick={() => setmodalCountryShow(true)}>
+            Shopping in: {}
+          </Button>
+        </div>
       </div>
       <div className="d-flex justify-content-around align-items-center ">
         <NavBar
