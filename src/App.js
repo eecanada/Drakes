@@ -85,20 +85,35 @@ const App = () => {
         footerEmail={footerEmail}
       />
 
-      <div className="row">
+      <div className="row announcement-row">
         <Country
           show={modalCountryShow}
           onHide={() => setmodalCountryShow(false)}
         />
 
-        <div>
-          <Button variant="primary" onClick={() => setmodalCountryShow(true)}>
-            Shopping in: {}
-          </Button>
+        <div className="shopping-row">
+          <div>
+            <Button
+              variant="primary"
+              id="shopping-btn"
+              className="shipping-location visibility-hide"
+              onClick={() => setmodalCountryShow(true)}
+            >
+              {`Shopping in: Australia ($ AUD)`}
+            </Button>
+          </div>
+
           <AnnouncementBar announcement="Free Express Shipping" />
-          <Button variant="primary" onClick={() => setmodalCountryShow(true)}>
-            Shopping in: {}
-          </Button>
+          <div>
+            <Button
+              id="shopping-btn"
+              className="shipping-location"
+              variant="primary"
+              onClick={() => setmodalCountryShow(true)}
+            >
+              {`Shopping in: Australia ($ AUD)`}
+            </Button>
+          </div>
         </div>
       </div>
       <div className="d-flex justify-content-around align-items-center ">

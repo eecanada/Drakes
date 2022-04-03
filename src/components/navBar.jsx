@@ -9,12 +9,11 @@ const NavBar = ({ logo, links, icons }) => {
             <img src={logo} alt="icon" width="170" />
           </a>
 
-
           <div className="nav-icons-container nav-sm">
             {icons.map((icon) => {
               return (
                 <a class="nav-icons" href="/">
-                  <img src={icon} alt="icon" width="25" height="25" />
+                  <img src={icon} alt="icon" class="nav-bar-icons" />
                 </a>
               );
             })}
