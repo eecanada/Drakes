@@ -90,11 +90,11 @@ const App = () => {
     },
   ];
 
-  useEffect(() => {
-    setTimeout(() => {
-      setModalShow(true);
-    }, 3500);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setModalShow(true);
+  //   }, 3500);
+  // }, []);
 
   // useEffect(() => {
   //   const API_KEY = process.env.REACT_APP_API_KEY;
@@ -109,14 +109,14 @@ const App = () => {
 
   useEffect(() => {
     const API_KEY = process.env.REACT_APP_API_KEY;
-    console.log(API_KEY);
+    console.log(API_KEY, 'key');
     const options = {
       method: 'GET',
       url: 'https://fixer-fixer-currency-v1.p.rapidapi.com/latest',
       params: { base: 'EUR', symbols: countryCode },
       headers: {
         'X-RapidAPI-Host': 'fixer-fixer-currency-v1.p.rapidapi.com',
-        'X-RapidAPI-Key': API_KEY,
+        'X-RapidAPI-Key': `${API_KEY}`,
       },
     };
     axios
