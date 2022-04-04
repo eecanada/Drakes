@@ -5,9 +5,9 @@ const Hero = ({ text, links }) => {
     <>
       <div className="col hero-col hidden">
         <h1 className="hero-text">{text}</h1>
-        {links.map((link) => {
+        {links.map((link, index) => {
           return (
-            <a className="hero-links" href="/">
+            <a key={index} className="hero-links" href="/">
               {link}
             </a>
           );
@@ -15,9 +15,9 @@ const Hero = ({ text, links }) => {
       </div>
       <div className="col hero-col">
         <h1 className="hero-text">{text}</h1>
-        {links.map((link) => {
+        {links.map((link, index) => {
           return (
-            <a className="hero-links" href="/">
+            <a key={index} className="hero-links" href="/">
               {link}
             </a>
           );

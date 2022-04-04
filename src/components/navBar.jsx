@@ -3,24 +3,24 @@ import React from 'react';
 const NavBar = ({ logo, links, icons }) => {
   return (
     <>
-      <nav class="navbar navbar-expand-xl">
-        <div class="container-fluid">
-          <a class="navbar-brand nav-logo" href="/">
+      <nav className="navbar navbar-expand-xl">
+        <div className="container-fluid">
+          <a className="navbar-brand nav-logo" href="/">
             <img src={logo} alt="icon" width="170" />
           </a>
 
           <div className="nav-icons-container nav-sm">
-            {icons.map((icon) => {
+            {icons.map((icon, index) => {
               return (
-                <a class="nav-icons" href="/">
-                  <img src={icon} alt="icon" class="nav-bar-icons" />
+                <a key={index} className="nav-icons" href="/">
+                  <img src={icon} alt="icon" className="nav-bar-icons" />
                 </a>
               );
             })}
           </div>
 
           <button
-            class="navbar-toggler custom-toggler"
+            className="navbar-toggler custom-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -28,14 +28,14 @@ const NavBar = ({ logo, links, icons }) => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon custom-toggler"></span>
+            <span className="navbar-toggler-icon custom-toggler"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              {links.map((link) => {
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              {links.map((link, index) => {
                 return (
-                  <a class="nav-link" href="/">
+                  <a key={index} className="nav-link" href="/">
                     {link}
                   </a>
                 );
@@ -44,9 +44,9 @@ const NavBar = ({ logo, links, icons }) => {
           </div>
 
           <div className="nav-icons-container nav-large">
-            {icons.map((icon) => {
+            {icons.map((icon, index) => {
               return (
-                <a class="nav-icons" href="/">
+                <a key={index} className="nav-icons" href="/">
                   <img src={icon} alt="icon" width="25" height="25" />
                 </a>
               );

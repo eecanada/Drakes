@@ -3,9 +3,9 @@ import React from 'react';
 const ProductCategories = ({ categories }) => {
   return (
     <div className="col d-flex flex-wrap align-items-center justify-content-center category-col">
-      {categories.map((category) => {
+      {categories.map((category, index) => {
         return (
-          <a href={category.link}>
+          <a key={index} href={category.link}>
             <img
               className="category-img"
               alt={category.title}

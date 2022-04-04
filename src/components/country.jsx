@@ -18,14 +18,14 @@ function Country(props) {
       <Modal.Body>
         <div>
           <select
-            class="form-select"
+            className="form-select"
             aria-label="Default select example"
             onChange={(e) => props.handleCountryChange(e)}
           >
             <option selected>Please select country</option>
-            {props.codes.map((code) => {
+            {props.codes.map((code, index) => {
               return (
-                <option value={code.base}>
+                <option key={index} value={code.base}>
                   {`${code.countryName} (${code.currencySymbol} ${code.base})`}
                 </option>
               );

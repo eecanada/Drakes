@@ -5,9 +5,9 @@ const FavoriteProducts = ({ favorites, title, shoppingIn, rate }) => {
     <>
       <h2 className="favorite-product-title">{title}</h2>
       <div className="col d-flex flex-wrap align-items-center justify-content-center favorite-col">
-        {favorites.map((favorite) => {
+        {favorites.map((favorite, index) => {
           return (
-            <a href={favorite.link} className="favorite-links">
+            <a key={index} href={favorite.link} className="favorite-links">
               <img
                 className="favorite-img"
                 alt={favorite.title}
