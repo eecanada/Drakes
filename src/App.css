@@ -313,7 +313,7 @@ body {
 
 .form-text {
   font-family: 'ITC Caslon 224 Std', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 300;
   line-height: 2.4rem;
   color: #192d21;
@@ -484,6 +484,22 @@ body {
 @media screen and (max-width: 1575px) {
   .favorite-img {
     max-width: 34rem;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1588px) {
+  /*   I apply only to screens between 400px and 699px*/
+
+  .footer-links-1 {
+    width: 16.67%;
+  }
+
+  .footer-links-2 {
+    width: 25%;
+  }
+  .newsletter-col {
+    width: 33.3%;
+    padding: 0%;
   }
 }
 
