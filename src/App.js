@@ -96,16 +96,37 @@ const App = () => {
   //   }, 3000);
   // }, []);
 
+  // useEffect(() => {
+  //   const API_KEY = process.env.REACT_APP_API_KEY;
+  //   axios
+  //     .get(
+  //       `http://data.fixer.io/api/latest?access_key=${API_KEY}&symbols=${countryCode}`
+  //     )
+  //     .then((response) => {
+  //       setRate(response.data.rates[countryCode]);
+  //     });
+  // }, [countryCode]);
+
   useEffect(() => {
     const API_KEY = process.env.REACT_APP_API_KEY;
+    const options = {
+      method: 'GET',
+      url: 'https://fixer-fixer-currency-v1.p.rapidapi.com/latest',
+      params: { base: 'EUR', symbols: countryCode },
+      headers: {
+        'X-RapidAPI-Host': 'fixer-fixer-currency-v1.p.rapidapi.com',
+        'X-RapidAPI-Key': API_KEY,
+      },
+    };
     axios
-      .get(
-        `http://data.fixer.io/api/latest?access_key=${API_KEY}&symbols=${countryCode}`
-      )
-      .then((response) => {
+      .request(options)
+      .then(function (response) {
         setRate(response.data.rates[countryCode]);
+      })
+      .catch(function (error) {
+        console.error(error);
       });
-  }, [countryCode]);
+  });
 
   const handleCountryChange = (e) => {
     console.log(e.target.value, 'VALUE');
