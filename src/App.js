@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import AnnouncementBar from './components/announcementBar';
 import NavBar from './components/navBar';
 import Hero from './components/hero';
@@ -27,12 +28,93 @@ const App = () => {
   const [submit, setSubmit] = useState(false);
   const [modalShow, setModalShow] = useState(false);
   const [modalCountryShow, setmodalCountryShow] = useState(false);
+  const [countryCode, setCountryCode] = useState('GBP');
+  const [rate, setRate] = useState(null);
+
+  const [shoppingIn, setShoppingIn] = useState({
+    countryName: 'United Kingdom',
+    base: 'GBP',
+    currencySymbol: '£',
+  });
+
+  const codes = [
+    {
+      countryName: 'United Kingdom',
+      base: 'GBP',
+      currencySymbol: '£',
+    },
+    {
+      countryName: 'Italy',
+      base: 'EUR',
+      currencySymbol: '€',
+    },
+    {
+      countryName: 'Australia',
+      base: 'AUD',
+      currencySymbol: '$',
+    },
+    {
+      countryName: 'Canada',
+      base: 'CAD',
+      currencySymbol: '$',
+    },
+    {
+      countryName: 'United States',
+      base: 'USD',
+      currencySymbol: '$',
+    },
+    {
+      countryName: 'Denmark',
+      base: 'DKK',
+      currencySymbol: 'kr.',
+    },
+    {
+      countryName: 'Hong Kong',
+      base: 'HKD',
+      currencySymbol: '$',
+    },
+    {
+      countryName: 'Norway',
+      base: 'NOK',
+      currencySymbol: 'kr',
+    },
+    {
+      countryName: 'Japan',
+      base: 'JPY',
+      currencySymbol: '¥',
+    },
+    {
+      countryName: 'Sweden',
+      base: 'SEK',
+      currencySymbol: 'kr',
+    },
+  ];
 
   // useEffect(() => {
   //   setTimeout(() => {
   //     setModalShow(true);
   //   }, 3000);
   // }, []);
+
+  useEffect(() => {
+    const API_KEY = process.env.REACT_APP_API_KEY;
+    axios
+      .get(
+        `http://data.fixer.io/api/latest?access_key=${API_KEY}&symbols=${countryCode}`
+      )
+      .then((response) => {
+        setRate(response.data.rates[countryCode]);
+      });
+  }, [countryCode]);
+
+  const handleCountryChange = (e) => {
+    console.log(e.target.value, 'VALUE');
+    const newCountry = codes.filter((code) => code.base == e.target.value);
+    setShoppingIn(newCountry[0]);
+    setCountryCode(newCountry[0].base);
+    setmodalCountryShow(false);
+    console.log(newCountry, 'Object');
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -46,7 +128,7 @@ const App = () => {
   };
 
   const categories = getCategories();
-  const favorites = getFavorites();
+  let favorites = getFavorites();
 
   const excerpt =
     'There should be a special word for that feeling you get when you put on a coat that just feels right. The way your posture seems to magically correct itself, like an an Italian wool chiropractor invisibly knotting and kneading. The right piece of outerwear can give an added sense of power and gravitas. In the same way a suit can feel like a suit of armour for the day ahead, the perfect coat can make even the bleakest winter morning, if not exciting, at least an exciting opportunity to wear a beautiful coat.';
@@ -89,6 +171,8 @@ const App = () => {
         <Country
           show={modalCountryShow}
           onHide={() => setmodalCountryShow(false)}
+          handleCountryChange={handleCountryChange}
+          codes={codes}
         />
 
         <div className="shopping-row">
@@ -111,7 +195,7 @@ const App = () => {
               variant="primary"
               onClick={() => setmodalCountryShow(true)}
             >
-              {`Shopping in: Australia ($ AUD)`}
+              {`Shopping in: ${shoppingIn.countryName} (${shoppingIn.currencySymbol} ${shoppingIn.base})`}
             </Button>
           </div>
         </div>
@@ -154,7 +238,12 @@ const App = () => {
       </div>
 
       <div className="row favorite-product-row">
-        <FavoriteProducts favorites={favorites} title="Shop the Look" />
+        <FavoriteProducts
+          shoppingIn={shoppingIn}
+          rate={rate}
+          favorites={favorites}
+          title="Shop the Look"
+        />
       </div>
 
       <div className="">

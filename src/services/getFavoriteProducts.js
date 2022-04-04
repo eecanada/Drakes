@@ -9,7 +9,7 @@ const favorites = [
     title: 'Camel Wool Polo Coat',
     link: '/',
     img: camelcoat,
-    price: 2295,
+    price: 2078,
     currency: '$',
   },
   {
@@ -17,7 +17,7 @@ const favorites = [
     title: 'Green Chain-Stitched Cotton Sweatshirt',
     link: '/',
     img: sweater,
-    price: 205,
+    price: 185,
     currency: '$',
   },
   {
@@ -25,7 +25,7 @@ const favorites = [
     title: 'Red Narrow Stripe Button Down Poplin Shirt',
     link: '/',
     img: poplinShirt,
-    price: 255,
+    price: 230,
     currency: '$',
   },
   {
@@ -33,7 +33,7 @@ const favorites = [
     title: 'Grey Wool Flannel Flat Front Trouser',
     link: '/',
     img: trousers,
-    price: 535,
+    price: 484,
     currency: '$',
   },
 ];

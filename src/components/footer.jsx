@@ -23,7 +23,7 @@ const Footer = ({
       </div>
 
       <div className="links-container row">
-        <div className="footer-links col-xxl-2 col-xl-6 col-lg-6 col-md-6 col-sm-6">
+        <div className="footer-links footer-links-1 col-xxl-2 col-xl-6 col-lg-6 col-md-6 col-sm-6">
           <ul>
             {links1.map((link, index) => {
               return (
@@ -36,7 +36,7 @@ const Footer = ({
             })}
           </ul>
         </div>
-        <div className="footer-links col-xxl-3 col-xl-4 col-lg-4 col-md-4 col-sm-4">
+        <div className="footer-links footer-links-2 col-xxl-3 col-xl-4 col-lg-4 col-md-4 col-sm-4">
           <ul>
             {links2.map((link, index) => {
               return (
