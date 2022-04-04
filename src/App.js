@@ -110,6 +110,7 @@ const App = () => {
   useEffect(() => {
     // const API_KEY = process.env.REACT_APP_API_KEY;
     // console.log(API_KEY, 'key');
+    console.log(typeof process.env.REACT_APP_API_KEY);
     const options = {
       method: 'GET',
       url: 'https://fixer-fixer-currency-v1.p.rapidapi.com/latest',
@@ -119,6 +120,7 @@ const App = () => {
         'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
       },
     };
+
     axios
       .request(options)
       .then(function (response) {
