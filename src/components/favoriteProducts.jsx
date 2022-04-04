@@ -16,7 +16,7 @@ const FavoriteProducts = ({ favorites, title, shoppingIn, rate }) => {
               <h4 className="favorite-title">{favorite.title}</h4>
               <h4 className="favorite-price">
                 <span>{shoppingIn.currencySymbol}</span>
-                {(favorite.price * rate).toFixed(2)}
+                {Math.floor((favorite.price * rate)).toFixed(2)}
               </h4>
             </a>
           );
