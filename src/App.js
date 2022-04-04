@@ -116,7 +116,7 @@ const App = () => {
       params: { base: 'EUR', symbols: countryCode },
       headers: {
         'X-RapidAPI-Host': 'fixer-fixer-currency-v1.p.rapidapi.com',
-        'X-RapidAPI-Key': API_KEY,
+        'X-RapidAPI-Key': process.env.API_KEY,
       },
     };
     axios
