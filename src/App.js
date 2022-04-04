@@ -100,7 +100,7 @@ const App = () => {
     const API_KEY = process.env.REACT_APP_API_KEY;
     axios
       .get(
-        `https://data.fixer.io/api/latest?access_key=${API_KEY}&symbols=${countryCode}`
+        `http://data.fixer.io/api/latest?access_key=${API_KEY}&symbols=${countryCode}`
       )
       .then((response) => {
         setRate(response.data.rates[countryCode]);
