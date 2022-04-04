@@ -97,9 +97,10 @@ const App = () => {
   // }, []);
 
   useEffect(() => {
+    const API_KEY = process.env.REACT_APP_API_KEY;
     axios
       .get(
-        `http://data.fixer.io/api/latest?access_key=48765ee123afd3f59b0b5247c3bfb552&symbols=${countryCode}`
+        `http://data.fixer.io/api/latest?access_key=${API_KEY}&symbols=${countryCode}`
       )
       .then((response) => {
         setRate(response.data.rates[countryCode]);
