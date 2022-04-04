@@ -109,7 +109,7 @@ const App = () => {
 
   useEffect(() => {
     const API_KEY = process.env.REACT_APP_API_KEY;
-    console.log(API_KEY)
+    console.log(API_KEY);
     const options = {
       method: 'GET',
       url: 'https://fixer-fixer-currency-v1.p.rapidapi.com/latest',
@@ -127,7 +127,7 @@ const App = () => {
       .catch(function (error) {
         console.error(error);
       });
-  });
+  }, [countryCode]);
 
   const handleCountryChange = (e) => {
     console.log(e.target.value, 'VALUE');
