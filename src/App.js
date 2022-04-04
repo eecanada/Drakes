@@ -109,7 +109,7 @@ const App = () => {
 
   const handleCountryChange = (e) => {
     console.log(e.target.value, 'VALUE');
-    const newCountry = codes.filter((code) => code.base == e.target.value);
+    const newCountry = codes.filter((code) => code.base === e.target.value);
     setShoppingIn(newCountry[0]);
     setCountryCode(newCountry[0].base);
     setmodalCountryShow(false);
