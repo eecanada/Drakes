@@ -438,6 +438,12 @@ body {
   }
 } */
 
+@media screen and (min-width: 2358px) {
+  .category-img {
+    max-height: 73rem;
+  }
+}
+
 @media screen and (min-width: 2023px) {
   .category-img {
     max-height: 65rem;
