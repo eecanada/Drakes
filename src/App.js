@@ -28,13 +28,13 @@ const App = () => {
   const [submit, setSubmit] = useState(false);
   const [modalShow, setModalShow] = useState(false);
   const [modalCountryShow, setmodalCountryShow] = useState(false);
-  const [countryCode, setCountryCode] = useState('GBP');
+  const [countryCode, setCountryCode] = useState('USD');
   const [rate, setRate] = useState(null);
 
   const [shoppingIn, setShoppingIn] = useState({
-    countryName: 'United Kingdom',
-    base: 'GBP',
-    currencySymbol: '£',
+    countryName: 'United States',
+    base: 'USD',
+    currencySymbol: '$',
   });
 
   const codes = [
