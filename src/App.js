@@ -109,7 +109,7 @@ const App = () => {
 
   useEffect(() => {
     // const API_KEY = process.env.REACT_APP_API_KEY;
-    console.log(process.env.REACT_APP_API_KEY, 'key');
+    // console.log(process.env.REACT_APP_API_KEY, 'key');
     // console.log(typeof process.env.REACT_APP_API_KEY);
     const options = {
       method: 'GET',
