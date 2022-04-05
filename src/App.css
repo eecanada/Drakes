@@ -543,6 +543,12 @@ body {
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .nav-logo {
+    margin-right: 35rem;
+  }
+}
+
 @media screen and (max-width: 1100px) {
   .category-img {
     max-height: 30rem;
@@ -572,6 +578,12 @@ body {
   }
 }
 
+@media screen and (max-width: 914px) {
+  .nav-logo {
+    margin-right: 20rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .category-img {
     max-height: 65rem;
@@ -583,6 +595,15 @@ body {
   .favorite-img {
     max-width: 40rem;
     max-height: 58rem;
+  }
+  .nav-logo {
+    margin-right: 10rem;
+  }
+}
+
+@media screen and (max-width: 665px) {
+  .nav-logo {
+    margin-right: 3rem;
   }
 }
 

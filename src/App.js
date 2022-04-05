@@ -90,27 +90,13 @@ const App = () => {
     },
   ];
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setModalShow(true);
-  //   }, 3500);
-  // }, []);
-
-  // useEffect(() => {
-  //   const API_KEY_JOKES = process.env.REACT_APP_API_KEY;
-  //   axios
-  //     .get(
-  //       `http://data.fixer.io/api/latest?access_key=${API_KEY}&symbols=${countryCode}`
-  //     )
-  //     .then((response) => {
-  //       setRate(response.data.rates[countryCode]);
-  //     });
-  // }, [countryCode]);
+  useEffect(() => {
+    setTimeout(() => {
+      setModalShow(true);
+    }, 3500);
+  }, []);
 
   useEffect(() => {
-    // const API_KEY = process.env.REACT_APP_API_KEY;
-    // console.log(process.env.REACT_APP_API_KEY, 'key');
-    // console.log(typeof process.env.REACT_APP_API_KEY);
     const options = {
       method: 'GET',
       url: 'https://fixer-fixer-currency-v1.p.rapidapi.com/latest',
