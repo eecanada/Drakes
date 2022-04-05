@@ -93,7 +93,7 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setModalShow(true);
-    }, 3500);
+    }, 5500);
   }, []);
 
   useEffect(() => {
