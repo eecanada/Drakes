@@ -97,7 +97,7 @@ const App = () => {
   // }, []);
 
   // useEffect(() => {
-  //   const API_KEY = process.env.REACT_APP_API_KEY;
+  //   const API_KEY_JOKES = process.env.REACT_APP_API_KEY;
   //   axios
   //     .get(
   //       `http://data.fixer.io/api/latest?access_key=${API_KEY}&symbols=${countryCode}`
@@ -109,7 +109,7 @@ const App = () => {
 
   useEffect(() => {
     // const API_KEY = process.env.REACT_APP_API_KEY;
-    // console.log(API_KEY, 'key');
+    console.log(process.env.REACT_APP_API_KEY, 'key');
     // console.log(typeof process.env.REACT_APP_API_KEY);
     const options = {
       method: 'GET',
