@@ -5,7 +5,7 @@
 
 # Description 
 
-* With a beautiful and responsive design, users should be easily able to navigate through the page.
+* An elegant and responsive landing page, with the newsletter, and currency exchange functionality.
 
 
 # Technologies Used
