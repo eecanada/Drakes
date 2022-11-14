@@ -1,6 +1,6 @@
 # Drakes
 
-<img width="600" alt="drakes" src="">
+<img width="1440" alt="Screen Shot 2022-11-13 at 11 02 09 PM" src="https://user-images.githubusercontent.com/53157290/201595756-d5546b17-68e0-4194-b545-4713a644fdfa.png">
 
 
 # Description 
